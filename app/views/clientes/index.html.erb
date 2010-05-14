@@ -1,0 +1,22 @@
+<h1>Listing clientes</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Idade</th>
+  </tr>
+
+<% @clientes.each do |cliente| %>
+  <tr>
+    <td><%=h cliente.nome %></td>
+    <td><%=h cliente.idade %></td>
+    <td><%= link_to 'Exibir', cliente %></td>
+    <td><%= link_to 'Alterar', edit_cliente_path(cliente) %></td>
+   
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo Cliente', new_cliente_path %>

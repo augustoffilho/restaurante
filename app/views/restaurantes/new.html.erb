@@ -1,0 +1,18 @@
+<html>
+<body>
+<%= render :partial=>"titulo" %>
+
+<h1>Adicionando Restaurante</h1>
+
+	<% form_for :restaurante, :url=> { :action=>"create"} do |f| %>
+		Nome: <%= f.text_field :nome %><br/>
+		Endereco: <%= f.text_field :endereco %><br/>
+		Especialidade: <%= f.text_field :especialidade %><br/>
+	<%= submit_tag "create" %>
+	<% end %>
+
+
+<%= link_to "Back", { :action=>"index"} %>
+
+</body>
+</html>

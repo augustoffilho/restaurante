@@ -1,0 +1,14 @@
+<html>
+<head>
+	<LINK href="/stylesheets/menu.css" rel="stylesheet" type="text/css">
+	<title>Sistema de Qualificacao de Restaurantes</title>
+	<%= javascript_include_tag :all %>
+</head>
+<body>
+	<%= menu_principal %>
+	<p style="color : green"><%= flash[:notice] %></p>
+	<%= yield %>
+
+
+</body>
+</html>

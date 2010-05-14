@@ -1,0 +1,15 @@
+<p>
+  <b>Nome:</b>
+  <%=h @cliente.nome %>
+</p>
+
+<p>
+  <b>Idade:</b>
+  <%=h @cliente.idade %>
+</p>
+
+
+<%= link_to 'Nova Qualificacao', :controller => "qualificacoes", :action => "new", :cliente => @cliente %>
+
+<%= link_to 'Alterar', edit_cliente_path(@cliente) %> |
+<%= link_to 'Voltar', clientes_path %>
